@@ -6,7 +6,8 @@ const Bread = require('../models/bread.js')
 breads.get('/', (req, res) => {
   res.render('index', 
     {
-      breads: Bread
+      breads: Bread,
+      title: 'Index Page'
     }
   )
   // The first argument for res.render() is always the name of the file inside the views folder we want to render.
