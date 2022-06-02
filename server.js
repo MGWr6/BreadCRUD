@@ -8,6 +8,11 @@ const PORT = process.env.PORT
 const app = express()
 // console.log(PORT) // running nodemon server.js will show the specified PORT in .env if all is set up correctly
 
+// MIDDLEWARE
+// app.set('views', __ dirname + '/views')
+app.set('view engine', 'jsx')
+app.engine('jsx', require('express-react-views').createEngine())
+
 
 // ROUTES
 app.get('/', (req, res) => {
